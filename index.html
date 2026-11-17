@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котбуль — история дружбы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Анимированный городской фон -->
+    <div class="city-bg">
+        <div class="building building-1"></div>
+        <div class="building building-2"></div>
+        <div class="building building-3"></div>
+        <div class="street-light light-1"></div>
+        <div class="street-light light-2"></div>
+    </div>
+
+    <!-- 1. Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="badge">PIXAR SPARKSHORTS</div>
+                <h1 class="title">Котбуль</h1>
+                <p class="subtitle">История о том, как страх превращается в дружбу</p>
+                <p class="meta">2019 · США · 9 минут · 2D анимация</p>
+                
+                <!-- Кнопка "Смотреть" -->
+                <a href="https://yandex.ru/video/preview/9377735501940251711?utm_source=copy_link&utm_medium=social&utm_campaign=share" target="_blank" class="watch-btn">
+                    <span class="play-icon">▶</span>
+                    <span>Смотреть мультфильм</span>
+                </a>
+            </div>
+            
+            <div class="hero-visual">
+                <img src="пос.jpg" alt="Постер Котбуль" class="poster"
+                     onerror="this.src='https://placehold.co/400x600/1a1a2e/ff6b35?text=KITBULL'">
+                <div class="glow"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Основная мысль -->
+    <section class="section story">
+        <div class="story-container">
+            <h2 class="section-title">Главная мысль:</h2>
+            <div class="story-text">
+                <p>           Не стоит судить по внешнему виду, так как он часто обманчив.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Интерактивная карта "Путь дружбы" -->
+    <section class="section journey">
+        <h2 class="section-title">Путь дружбы</h2>
+        <p class="section-subtitle">Кликай на точки, чтобы узнать историю</p>
+        
+        <div class="journey-map">
+            <div class="journey-line"></div>
+            
+            <div class="journey-point" data-step="1" data-title="Страх" data-text="Котёнок прячется в мусорном баке, боясь каждого шороха. Он одинок и напуган.">
+                <div class="point-marker">1</div>
+                <div class="point-label">Начало</div>
+            </div>
+            
+            <div class="journey-point" data-step="2" data-title="Встреча" data-text="Котёнок замечает питбуля за забором. Сначала он боится, но что-то тянет его ближе.">
+                <div class="point-marker">2</div>
+                <div class="point-label">Встреча</div>
+            </div>
+            
+            <div class="journey-point" data-step="3" data-title="Доверие" data-text="Маленькими шагами котёнок приближается к псу. Тот не рычит, а смотрит с надеждой.">
+                <div class="point-marker">3</div>
+                <div class="point-label">Доверие</div>
+            </div>
+            
+            <div class="journey-point" data-step="4" data-title="Игра" data-text="Впервые котёнок играет. Питбуль виляет хвостом, а котёнок забывает о страхе.">
+                <div class="point-marker">4</div>
+                <div class="point-label">Игра</div>
+            </div>
+            
+            <div class="journey-point" data-step="5" data-title="Опасность" data-text="Хозяин питбуля замечает котёнка. Теперь нужно спасать друга!">
+                <div class="point-marker">5</div>
+                <div class="point-label">Опасность</div>
+            </div>
+            
+            <div class="journey-point" data-step="6" data-title="Свобода" data-text="Котёнок освобождает питбуля. Вместе они убегают от прошлого навстречу новой жизни.">
+                <div class="point-marker">6</div>
+                <div class="point-label">Свобода</div>
+            </div>
+        </div>
+        
+        <div class="journey-info" id="journeyInfo">
+            <h3 id="journeyTitle">Выбери точку на карте</h3>
+            <p id="journeyText">Кликай на пронумерованные точки, чтобы узнать, как развивалась история дружбы.</p>
+        </div>
+    </section>
+
+    <!-- 4. Эмоциональный слайдер -->
+    <section class="section emotions">
+        <h2 class="section-title">Эмоции героев</h2>
+        <p class="section-subtitle">Двигай слайдер и смотри, как меняются чувства</p>
+        
+        <div class="emotion-container">
+            <div class="emotion-display">
+                <div class="emotion-character" id="emotionCharacter">😿</div>
+                <p class="emotion-text" id="emotionText">Страх и одиночество</p>
+            </div>
+            
+            <div class="emotion-slider-container">
+                <input type="range" min="0" max="100" value="0" class="emotion-slider" id="emotionSlider">
+                <div class="slider-labels">
+                    <span>😨 Страх</span>
+                    <span>😐 Осторожность</span>
+                    <span>😊 Доверие</span>
+                    <span>😺 Счастье</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Мини-игра "Собери друзей" -->
+    <section class="section game">
+        <h2 class="section-title">Помоги друзьям встретиться!</h2>
+        <p class="section-subtitle">Перетащи котёнка к питбулю</p>
+        
+        <div class="game-container">
+            <div class="game-field" id="gameField">
+                <div class="game-obstacle obstacle-1"></div>
+                <div class="game-obstacle obstacle-2"></div>
+                <div class="game-obstacle obstacle-3"></div>
+                
+                <div class="draggable" id="draggable" draggable="true">
+                    <div class="character-cat">🐱</div>
+                </div>
+                
+                <div class="target" id="target">
+                    <div class="character-dog">🐶</div>
+                </div>
+            </div>
+            
+            <div class="game-status" id="gameStatus">
+                <p id="gameMessage">Перетащи котёнка к питбулю!</p>
+                <button class="btn-reset" id="resetGame">Начать заново</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Персонажи -->
+    <section class="section characters">
+        <h2 class="section-title">Герои истории</h2>
+        
+        <div class="characters-grid">
+            <div class="character-card">
+                <div class="character-img-container">
+                    <img src="кот.jpg" alt="Котёнок" class="character-img"
+                         onerror="this.src='https://placehold.co/300x300/ff6b35/ffffff?text=🐱'">
+                </div>
+                <h3>Котёнок</h3>
+                <p>Маленький, пугливый, но храбрый. Живёт на улицах Сан-Франциско и боится всех вокруг.</p>
+            </div>
+            
+            <div class="character-card">
+                <div class="character-img-container">
+                    <img src="собачка.webp" alt="Питбуль" class="character-img"
+                         onerror="this.src='https://placehold.co/300x300/4a90e2/ffffff?text=🐶'">
+                </div>
+                <h3>Питбуль</h3>
+                <p>Большой и добрый пёс, которого держат на цепи. Мечтает о свободе и друге.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Кадры из мультфильма -->
+    <section class="section frames">
+        <h2 class="section-title">Кадры из мультфильма</h2>
+        
+        <div class="frames-grid">
+            <div class="frame-card">
+                <img src="https://avatars.mds.yandex.net/i?id=1ec31454fb632d5be238b0abb3950a8f1ace6a48-5231857-images-thumbs&n=13" alt="Кадр 1"
+                     onerror="this.src='https://placehold.co/500x300/1a1a2e/ff6b35?text=Кадр+1'">
+            </div>
+            <div class="frame-card">
+                <img src="https://www.kino-teatr.ru/movie/kadr/138711/891116.jpg" alt="Кадр 2"
+                     onerror="this.src='https://placehold.co/500x300/1a1a2e/ff6b35?text=Кадр+2'">
+            </div>
+            <div class="frame-card">
+                <img src="https://i.pinimg.com/originals/c6/5a/58/c65a588b90f798ebc19fbcf58662a517.jpg" alt="Кадр 3"
+                     onerror="this.src='https://placehold.co/500x300/1a1a2e/ff6b35?text=Кадр+3'">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>🌃 История дружбы в ночном Сан-Франциско · © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
